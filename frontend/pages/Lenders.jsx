@@ -12,8 +12,10 @@ export default function Lenders() {
 
     const navigateto = useNavigate()
     // const navigateto = use()
-   
+
     const [users, setusers] = useState([])
+    const [lendpopup, setlendpopup] = useState(false)
+    const [everylender, seteverylender] = useState(null)
 
     axios.defaults.baseURL = import.meta.env.VITE_BASEURL
 
@@ -31,8 +33,7 @@ export default function Lenders() {
     console.log(users);
 
 
-    const [lendpopup, setlendpopup] = useState(false)
-    const [everylender, seteverylender] = useState(null)
+
 
     const handleclick = async (child) => {
         if (child.choice === true) {

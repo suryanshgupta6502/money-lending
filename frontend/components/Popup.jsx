@@ -18,7 +18,7 @@ function Popup({ setaccountpopup }) {
     console.log(walletdata.wallet[0]);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/get-profile", { params: { address: walletdata.wallet[0] } })
+        axios.get("/get-profile", { params: { address: walletdata.wallet[0] } })
             // axios.defaults.baseURL = import.meta.env.VITE_BASEURL
             .then((res) => {
                 setprofile(res.data.user[0])
@@ -31,14 +31,17 @@ function Popup({ setaccountpopup }) {
     console.log(axios.defaults.baseURL);
 
     const formsubmit = async (e) => {
-        // e.preventDefault()
+        e.preventDefault()
         console.log(e);
         console.log(intrest, choice, "form");
 
         await axios.post("/update", { walletaddress: walletdata.wallet[0], intrest, choice })
+        // e.preventDefault(false)
         setaccountpopup(false)
+        location.reload()
+        
     }
-    
+
     if (profile) {
         if (profile?.choice === true)
             document.getElementById('radiotrue').checked = true
