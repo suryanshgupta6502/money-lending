@@ -1,0 +1,26 @@
+.left {
+    width: 6%;
+    border-right: 1px solid #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+
+}
+
+.left img {
+    padding: 0px 0px 50px 0px;
+    width: 50px;
+}
+
+.left ul {
+    padding: 0;
+}
+
+.left li {
+
+    margin-top: 30px;
+    list-style: none;
+    cursor: pointer;
+}

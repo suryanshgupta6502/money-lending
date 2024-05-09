@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 80px;
+}
+nav h1{
+    text-transform: uppercase;
+   
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li{
+    text-transform: capitalize;
+    margin-left : 30px;
+    list-style: none;
+}
+

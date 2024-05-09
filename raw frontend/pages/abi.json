@@ -1,0 +1,133 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_lender",
+                "type": "address"
+            },
+            {
+                "internalType": "int256",
+                "name": "_amount",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "_intrest",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "_duration",
+                "type": "int256"
+            }
+        ],
+        "name": "loanissue",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "balances",
+        "outputs": [
+            {
+                "internalType": "int256",
+                "name": "",
+                "type": "int256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getAllLoans",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "lender",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "borrower",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "amount",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "intrest",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "duration",
+                        "type": "int256"
+                    }
+                ],
+                "internalType": "struct mycontract.loan[]",
+                "name": "",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "loans",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "lender",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "borrower",
+                "type": "address"
+            },
+            {
+                "internalType": "int256",
+                "name": "amount",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "intrest",
+                "type": "int256"
+            },
+            {
+                "internalType": "int256",
+                "name": "duration",
+                "type": "int256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
