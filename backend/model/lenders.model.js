@@ -9,12 +9,13 @@ const scehma = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    interestrate:{
-        type:Number,
+    interestrate: {
+        type: Number,
+        default: 0
         // required:[true,"please add interes rate"]
     },
-    duration:{
-        
+    duration: {
+        type: Number
     },
     createdAt: {
         type: String, // Use Number type for timestamps

@@ -109,7 +109,29 @@ app.post("/profile", async (req, res) => {
 
 })
 
-app.listen(3000, () => {
-    console.log("port listen at 3000");
+
+app.get("/get-profile",async(req,res)=>{
+
+    const {address}=req.query
+    console.log(req);
+    try {
+        const user = await lendersmodel.find({ useraddress: address })
+        console.log(user);
+
+        res.status(200).send({
+            message: "get user profile",
+            user
+        })
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({ message: "error in profile" })
+    }
+
+})
+
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+    console.log(`port listen at ${port}`);
 })
 
