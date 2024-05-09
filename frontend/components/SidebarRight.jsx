@@ -52,11 +52,11 @@ export default function SidebarRight() {
         <div className={styles.down}>
             <div className={styles.item}>
                 <h5>Avilable Balance</h5>
-                <h2>{balances} Eth</h2>
+                <h2>{balances} INR</h2>
             </div>
             <div className={styles.item}>
                 <h5>Due Loan Amount</h5>
-                <h2>{balances} Eth</h2>
+                <h2>{balances} INR</h2>
             </div>
             <div className={styles.item}>
                 <h5>Due date</h5>

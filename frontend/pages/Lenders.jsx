@@ -15,8 +15,11 @@ export default function Lenders() {
 
     const [users, setusers] = useState([])
 
+    console.log(import.meta.env);
+    axios.defaults.baseURL = import.meta.env.VITE_BASEURL
+
     const dataa = async () => {
-        const { data } = await axios.get("http://localhost:3000/lenders")
+        const { data } = await axios.get("/lenders")
         setusers(data?.users)
         console.log(users);
 
@@ -62,7 +65,7 @@ export default function Lenders() {
                 </ul>
 
 
-                {users.map((child, i) => {
+                {users?.map((child, i) => {
                     // console.log(child);
                     return <div key={i} >
                         <div className={styles.lender1}>
