@@ -2,6 +2,8 @@ const web = require('web3')
 const express = require('express')
 const mongoose = require("mongoose")
 const cors = require("cors")
+const dotenv=require("dotenv")
+dotenv.config()
 const lendersmodel = require('./model/lenders.model')
 
 const app = express()
@@ -9,7 +11,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect("mongodb+srv://Surya:Surya@cluster0.yenhx0h.mongodb.net/finalyear").then(() => {
+mongoose.connect(process.env.MONGODB).then(() => {
     console.log("coonected");
 }).catch((err) => {
     console.log(err);
