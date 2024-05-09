@@ -12,10 +12,9 @@ export default function Lenders() {
 
     const navigateto = useNavigate()
     // const navigateto = use()
-
+   
     const [users, setusers] = useState([])
 
-    console.log(import.meta.env);
     axios.defaults.baseURL = import.meta.env.VITE_BASEURL
 
     const dataa = async () => {

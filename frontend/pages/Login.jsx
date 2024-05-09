@@ -19,6 +19,7 @@ export default function Login() {
         metapresent = true
     }
     console.log(walletdata);
+    console.log(window.ethereum);
 
 
     return (
@@ -32,6 +33,9 @@ export default function Login() {
                     <button type="submit">Login</button> */}
                     {metapresent && <button onClick={async () => {
                         await walletConnect();
+                        console.log(walletdata.wallet);
+                        localStorage.setItem("address", walletdata.wallet)
+
                         navigateto("/dashboard")
                     }}>Link Metamask</button>}
                     <h4>{!metapresent && "metamask not present"}</h4>

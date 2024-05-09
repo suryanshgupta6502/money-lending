@@ -2,12 +2,13 @@ import React, { useContext, useEffect, useState } from 'react'
 import { FaBell, FaUser, FaWallet } from 'react-icons/fa'
 import styles from './SidebarRight.module.css'
 import { Walletcontext } from '../pages/Wallet.context'
+import Popup from '../components/Popup'
 
 export default function SidebarRight() {
 
     const { walletdata, walletConnect } = useContext(Walletcontext)
     const [balances, setbalances] = useState()
-
+    const [accountpopup, setaccountpopup] = useState(false)
 
     useEffect(() => {
         if (walletdata.wallet == null) {
@@ -45,7 +46,8 @@ export default function SidebarRight() {
             <ul>
                 <li><FaWallet /> <h3>Wallet</h3> </li>
                 <li><FaBell /></li>
-                <li><FaUser /></li>
+                <li onClick={() => setaccountpopup(true)}><FaUser /></li>
+                {accountpopup && <Popup setaccountpopup={setaccountpopup} />}
             </ul>
         </div>
 

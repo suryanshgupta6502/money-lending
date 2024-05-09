@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
 import Web3 from 'web3';
 import abi from './abi.json'
+import axios from 'axios';
 
 export const Walletcontext = createContext(null)
 
@@ -9,16 +10,19 @@ export const Walletcontextprovider = ({ children }) => {
 
     const [walletdata, setwalletdata] = useState({ wallet: null, web3: null, contract: null })
 
-
+    axios.defaults.baseURL = import.meta.env.VITE_BASEURL
     // window.addEventListener('beforeunload', () => {  });
-    window.BeforeUnloadEvent = () => {
-        localStorage.removeItem("address")
-    }
+    // window.BeforeUnloadEvent = () => {
+    //     localStorage.removeItem("address")
+    //     console.log("removing local storage from context");
+    // }
+
 
     useEffect(() => {
         if (walletdata.wallet && walletdata.web3 && walletdata.contract) {
             console.log(walletdata);
             localStorage.setItem("address", walletdata.wallet)
+
         }
     }, [walletdata])
 
@@ -28,6 +32,7 @@ export const Walletcontextprovider = ({ children }) => {
 
         const walletaddress = await window.ethereum.request({
             method: "eth_requestAccounts"
+            // method: "eth_accounts"
         })
 
 
@@ -37,6 +42,7 @@ export const Walletcontextprovider = ({ children }) => {
 
         console.log("inside context");
         setwalletdata({ wallet: walletaddress, web3: web3, contract: contract })
+
         // navigate('dash')
     }
 

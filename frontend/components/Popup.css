@@ -1,0 +1,26 @@
+.popup {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+
+    background-color: rgba(0, 75, 128, 0.145);
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+}
+
+.popupform {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #262833;
+    ;
+    padding: 5vw;
+    border-radius: 25px;
+}
+
+.popupform button {
+    margin-left: 3vw;
+}

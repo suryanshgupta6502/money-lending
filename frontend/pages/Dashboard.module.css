@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    background-color: #262833;
+    
+}
+
+.main{
+    width: 70%;
+}
