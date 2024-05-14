@@ -57,28 +57,36 @@ export default function Lenders() {
 
 
             <div className={styles.lenders}>
-                <ul className={styles.buttons}>
-                    <li>Name</li>
-                    <li>Interest</li>
-                    <li>duration</li>
-                    {/* <li>amount</li> */}
-                </ul>
+                {/* <ul className={styles.buttons}> */}
+                {/* <li>Address</li> */}
+                {/* <li>Interest rate</li> */}
+                {/* <li>duration</li> */}
+                {/* <li>amount</li> */}
+                {/* </ul> */}
 
 
                 {users?.map((child, i) => {
                     // console.log(child);
-                    return <div key={i} >
+                    return <div key={i} className={styles.continer}>
+
+                        <ul className={styles.buttons}>
+                            <li>Address</li>
+                            <li>Interest rate</li>
+                            {/* <li>duration</li> */}
+                            {/* <li>amount</li> */}
+                        </ul>
+                        <br />
                         <div className={styles.lender1}>
                             <li>{child.useraddress}</li>
                             <li>{child.interestrate} %</li>
-                            <li>duration</li>
+                            {/* <li>duration</li> */}
                         </div>
                         <div className={styles.lender2}>
                             {child.choice === true ? <li className={styles.avilable}>avilable</li > : <li className={styles.notavilable}>not avilable</li>}
                             <button onClick={() => { handleclick(child) }}>
                                 Get</button>
                         </div>
-                        <br /><br />
+                        {/* <br /><br /> */}
                     </div>
                 })}
                 {lendpopup && <Lend everylender={everylender} setlendpopup={setlendpopup} />}

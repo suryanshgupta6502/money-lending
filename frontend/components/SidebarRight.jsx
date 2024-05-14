@@ -44,7 +44,7 @@ export default function SidebarRight() {
 
 
             <ul>
-                <li><FaWallet /> <h3>Wallet</h3> </li>
+                <li><FaWallet /> <h4 className={styles.wallet}>fdgfgfdgffdfgdfgddfgfggggggggggggggggggfdsknjn</h4> </li>
                 <li><FaBell /></li>
                 <li onClick={() => setaccountpopup(true)}><FaUser /></li>
                 {accountpopup && <Popup setaccountpopup={setaccountpopup} />}
@@ -52,18 +52,18 @@ export default function SidebarRight() {
         </div>
 
         <div className={styles.down}>
-            <div className={styles.item}>
+            {/* <div className={styles.item}>
                 <h5>Avilable Balance</h5>
                 <h2>{balances} INR</h2>
-            </div>
+            </div> */}
             <div className={styles.item}>
                 <h5>Due Loan Amount</h5>
                 <h2>{balances} INR</h2>
             </div>
-            <div className={styles.item}>
+            {/* <div className={styles.item}>
                 <h5>Due date</h5>
                 <h2>4d 13h 24m</h2>
-            </div>
+            </div> */}
         </div>
     </div>
     )

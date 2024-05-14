@@ -10,7 +10,7 @@ export const Walletcontextprovider = ({ children }) => {
 
     const [walletdata, setwalletdata] = useState({ wallet: null, web3: null, contract: null })
 
-    axios.defaults.baseURL = import.meta.env.VITE_BASEURL
+    // axios.defaults.baseURL = import.meta.env.VITE_BASEURL
     // window.addEventListener('beforeunload', () => {  });
     // window.BeforeUnloadEvent = () => {
     //     localStorage.removeItem("address")

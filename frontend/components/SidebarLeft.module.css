@@ -1,7 +1,7 @@
 .left {
     width: 6%;
-    border-right: 1px solid #ffffff;
-    height: 100vh;
+    border-right: 1px solid #ffffff9d;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;

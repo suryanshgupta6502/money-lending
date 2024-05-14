@@ -24,13 +24,15 @@ button {
     justify-content: space-between;
     list-style: none;
     text-transform: capitalize;
-    margin-bottom: 5vh;
+    margin-bottom: 1vh;
 }
 
 .buttons li {
     border: 1px solid white;
     padding: .5vw 1vw;
     border-radius: 25px;
+    /* background-color: #A686C4; */
+    color: white;
 }
 
 .lenders {
@@ -40,13 +42,22 @@ button {
     margin: 1vw;
     padding: 2vw;
     border-radius: 25px;
-    border: 1px solid rgba(255, 255, 255, 0.647);
+    /* border: 1px solid rgba(255, 255, 255, 0.647); */
+}
+
+
+.continer{
+    border: 2px solid rgba(255, 255, 255, 0.651);
+    margin-bottom: 4%;
+    padding: 2%;
+    border-radius: 20px;
 }
 
 .lender1 {
     display: flex;
     justify-content: space-between;
     list-style: none;
+    margin-bottom: 1vh;
 }
 
 .lender2 {
@@ -58,9 +69,10 @@ button {
 .lender2 button {
     padding: .3vw 2vw;
     border-radius: 25px;
-    background-color: transparent;
-    border: 1px solid #8888DA;
-    color: white;
+    background-color: #E9AE79;
+    border: none;
+    color: black;
+
 }
 
 .avilable {

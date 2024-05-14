@@ -12,7 +12,7 @@ export default function Sidebar() {
         <div className={styles.left}>
             <img src="./loan 1.svg" />
             <ul>
-                <li><RiDashboard2Fill size={30} onClick={() => navigate("/dashboard")} /></li>
+                <li><RiDashboard2Fill size={30} title='dashboard' onClick={() => navigate("/dashboard")} /></li>
                 <li> <GiPayMoney title='Lenders' size={30} onClick={() => navigate("/lenders")} /></li>
                 {/* <li><GiReceiveMoney title='Recieve Money' size={30} onClick={() => navigate("/borrow")} /></li> */}
             </ul>

@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import styles from './Login.module.css'
 import Web3 from 'web3'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { Walletcontext } from './Wallet.context'
+import axios from 'axios'
 
 
 export default function Login() {
 
     const { walletdata, walletConnect } = useContext(Walletcontext)
 
-
     const navigateto = useNavigate()
+
+    // useEffect(() => {
+    //     axios.post("/profile", { address: walletdata?.wallet[0] })
+    //         .then((res) => {
+    //             console.log(res);
+    //         })
+    // })
 
     let metapresent = false
     if (window.ethereum) {
