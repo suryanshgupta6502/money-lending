@@ -20,7 +20,7 @@ function Popup({ setshowpopup }) {
         console.log(e);
         console.log(intrest, choice, "fomr");
 
-        await axios.post("http://localhost:3000/update", { walletaddress:walletdata.wallet[0], intrest, choice })
+        await axios.post("/update", { walletaddress:walletdata.wallet[0], intrest, choice })
 
     }
 

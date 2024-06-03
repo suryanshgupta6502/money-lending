@@ -87,7 +87,7 @@ app.post("/profile", async (req, res) => {
         let user;
 
         if (log == null) {
-            user = await lendersmodel({ useraddress: address, choice: choice })
+            user = await lendersmodel({ useraddress: address })
                 .save()
             console.log("adding", user);
         }
